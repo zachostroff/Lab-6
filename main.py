@@ -9,7 +9,6 @@ def encode(code_in):
         if new >= 10:
             new -= 10
         code_out += str(new)
-
     print('Your password has been encoded and stored!\n')
     return code_out
 
