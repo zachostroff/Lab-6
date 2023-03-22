@@ -1,6 +1,7 @@
 # lab 6
 # encoder/ decoder
 # GitHub with partner
+#started by zachary ostroff
 
 def encode(code_in):
     code_out = ''
