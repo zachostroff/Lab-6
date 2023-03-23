@@ -2,6 +2,7 @@
 # encoder/ decoder
 # GitHub with partner
 # started by zachary ostroff
+# collaborated on by Jaxon Russell
 
 def encode(code_in):
     code_out = ''
@@ -12,6 +13,16 @@ def encode(code_in):
         code_out += str(new)
     print('Your password has been encoded and stored!\n')
     return code_out
+
+def decode(encString):
+    decString = ''
+
+    for i in encString:
+        num = int(i) - 3
+        if num < 0:
+            num += 10
+        decString += str(num)
+    return decString
 
 
 def main():
@@ -31,9 +42,10 @@ def main():
         elif option == '1':
             code_in = input('Please enter your password to encode: ')
             code_out = encode(code_in)
-        # elif option == '2':
-        #     if code_out != '':
-        #         decode(code_out)
+        elif option == '2':
+             if code_out != '':
+                 decString = decode(code_out)
+                 print(f'The encoded password is {code_out}, and the original password is {decString}.\n')
         else:
             print('Invalid input')
 
